@@ -30,6 +30,7 @@ class ListContacts extends Component{
                         onChange={(event)=>this.updateQuery(event.target.value)}
                     />
                 </div>
+                {JSON.stringify(this.state)}
                 <ol className='contact-list'>
                     {this.props.contacts.map(contact => (
                         <li key={contact.id} className="contact-list-item">
