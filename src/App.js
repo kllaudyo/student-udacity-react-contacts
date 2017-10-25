@@ -21,6 +21,12 @@ class App extends Component {
 
     };
 
+    navigateToCreate = () => {
+        this.setState({
+            screen:'create'
+        })
+    };
+
     componentDidMount(){
         ContactsApi.getAll().then( (contacts) => this.setState({contacts : contacts}) )
     }
@@ -32,6 +38,7 @@ class App extends Component {
                 {this.state.screen === 'list' && (
                     <ListContacts
                         onDeleteContact={this.removeContact}
+                        onNavigate={this.navigateToCreate}
                         contacts={this.state.contacts} />
                 )}
 
