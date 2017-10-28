@@ -84,7 +84,7 @@ class ImageInput extends React.Component {
 
     const style = {
       position: 'relative'
-    }
+    };
 
     if (value) {
       style.backgroundImage = `url("${value}")`
